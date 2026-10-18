@@ -11,13 +11,14 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'python src/app.py'
+                bat '"C:\\Program Files\\Python311\\python.exe" src/app.py'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'python -m pytest tests/'
+                bat '"C:\\Program Files\\Python311\\python.exe" -m pytest --version'
+                bat 'set PYTHONPATH=%APPDATA%\\Python\\Python311\\site-packages&& "C:\\Program Files\\Python311\\python.exe" -m pytest tests/'
             }
         }
 
