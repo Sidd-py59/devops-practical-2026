@@ -18,7 +18,7 @@ pipeline {
         stage('Test') {
             steps {
                 bat '''
-                    set "PYTHONPATH=%APPDATA%\\Python\\Python311\\site-packages"
+                    set "PYTHONPATH=C:\\Users\\siddb\\AppData\\Roaming\\Python\\Python311\\site-packages"
                     "C:\\Program Files\\Python311\\python.exe" -m pytest tests/
                 '''
             }
